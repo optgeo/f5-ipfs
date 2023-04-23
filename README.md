@@ -8,5 +8,6 @@ Geospatial Information Authority of Japan https://terras.gsi.go.jp
 ```zsh
 export TERRAS_USER_PASSWORD=#{your_id}:#{your_password}
 ruby list.rb 
+ruby dump.rb 
 ```
 
