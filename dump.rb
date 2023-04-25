@@ -1,6 +1,6 @@
 require 'lmdb'
 
-db = LMDB.new('lmdb').database
+db = LMDB.new('lmdb', :mapsize => 100 * 1024 * 1024).database
 csv = File.open('f5.csv', 'w')
 md = File.open('f5.md', 'w')
 db.each {|path, cid|

@@ -18,7 +18,7 @@ def get(year, fn)
   }
 end
 
-$db = LMDB.new('lmdb').database
+$db = LMDB.new('lmdb', :mapsize => 100 * 1024 * 1024).database
 1996.upto(2023) {|year|
   s = `curl --silent -u $TERRAS_USER_PASSWORD ftp://terras.gsi.go.jp/data/coordinates_F5/GPS/#{year}/`
   s.split("\n").each {|l|
